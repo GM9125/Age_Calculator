@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Age Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Age Calculator</h1>
+    <label for="dob">Enter your Date of Birth:</label>
+    <input type="date" id="dob">
+    <div class="centered-buttons">
+      <button id="calculateBtn">Calculate Age</button>
+      <button id="clearBtn">Clear</button>
+      <button id="shareBtn">Share</button>
+    </div>
+    <div id="result"></div>
+    <div id="error" class="error"></div>
+    <div id="units">
+      <input type="radio" name="unit" value="years" id="years" checked>
+      <label for="years">Years</label>
+      <input type="radio" name="unit" value="months" id="months">
+      <label for="months">Months</label>
+      <input type="radio" name="unit" value="days" id="days">
+      <label for="days">Days</label>
+    </div>
+    <div id="personalizedGreeting"></div>
+    <div id="themeCustomization">
+      <label for="themeColor">Theme Color:</label>
+      <input type="color" id="themeColor">
+    </div>
+    <div id="ageStatistics"></div>
+    <div id="languageSelection">
+      <label for="language" id="languageLabel">Language:</label>
+      <select id="language">
+        <option value="en">English</option>
+        <option value="fr">French</option>
+        <option value="hi">Hindi</option>
+        <option value="ur">Urdu</option>
+        <option value="sn">Sindhi</option>
+        <option value="ar">Arabic</option>
+        <option value="cn">Chinese</option>
+        <option value="gr">German</option>
+        <option value="tr">Turkish</option>
+        <option value="pn">Punjabi</option>
+        <option value="jp">Japanese</option>
+        <option value="ru">Russian</option>
+        <option value="es">Spanish</option>
+        <option value="bn">Bengali</option>
+        <option value="pt">Portuguese</option>
+      </select>
+    </div>
+    <div style=" color:white; background: linear-gradient(#000000); text-align:center;">
+
+      <h5>Made with &hearts; by Ghulam Mustafa</h5>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
