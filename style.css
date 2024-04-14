@@ -1,0 +1,332 @@
+/* Base styles */
+body {
+  font-family: "Arial", sans-serif;
+  color: #fff;
+  background-color: #333;
+}
+
+.container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+}
+
+h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  background: -webkit-linear-gradient(left, #ffffff, #48ff00, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #ccc; /* Lighter text color for labels to complement the button style */
+}
+
+input[type="date"] {
+  width: 90%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid #555; /* Darker border for input fields */
+  border-radius: 5px;
+  background-color: #222;
+  color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for transform and shadow */
+}
+
+input[type="date"]:hover {
+  transform: scale(1.05); /* Slightly increase size on hover */
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.6); /* Add a light shadow for a glowing effect */
+}
+
+input[type="date"]:focus {
+  border-color: #ff7300; /* Change to a bright color when focused */
+  box-shadow: 0 0 15px rgba(255, 115, 0, 0.7); /* Maintain the glow effect on focus */
+}
+
+/* Button styles */
+#calculateBtn,
+#clearBtn,
+#shareBtn {
+  padding: 10px 25px; /* Padding for spacing */
+  border: none;
+  outline: none;
+  color: #fff; /* White text for better readability */
+  background: #444; /* Darker background for buttons */
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 30px; /* Rounded corners */
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Glow effect */
+  width: auto; /* Width auto for content-based sizing */
+  white-space: nowrap; /* Prevents wrapping of text */
+}
+
+/* Glowing animation for buttons */
+#calculateBtn:before,
+#clearBtn:before,
+#shareBtn:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00ab,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-85 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 30px; /* Adjusted border-radius to match the language button */
+}
+
+@keyframes glowing-button-85 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+#calculateBtn:after,
+#clearBtn:after,
+#shareBtn:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  left: 0;
+  top: 0;
+  border-radius: 30px; /* Adjusted border-radius to match the language button */
+}
+
+#calculateBtn,
+#clearBtn,
+#shareBtn {
+  padding: 0.6em 2em;
+  border: none;
+  outline: none;
+  color: #fff; /* White text for better readability */
+  background: #444; /* Darker background for buttons */
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Adding a glow effect to match the buttons */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for transform and shadow */
+}
+
+#calculateBtn:hover,
+#clearBtn:hover,
+#shareBtn:hover {
+  transform: scale(1.05); /* Slightly increase size on hover */
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.6); /* Add a light shadow for a glowing effect */
+}
+
+#calculateBtn:focus,
+#clearBtn:focus,
+#shareBtn:focus {
+  border-color: #ff7300; /* Change to a bright color when focused */
+  box-shadow: 0 0 15px rgba(255, 115, 0, 0.7); /* Maintain the glow effect on focus */
+}
+
+#result {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 1.5rem; /* Larger font size for the result */
+  font-weight: bold; /* Bold for emphasis */
+}
+
+/* Centered buttons container */
+.centered-buttons {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* Styles for radio buttons and selects */
+input[type="radio"],
+#themeColor,
+#language {
+  cursor: pointer;
+  /* Adding a glow effect to match the buttons */
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+/* New styles for centering and separating lines */
+#units input[type="radio"],
+#themeCustomization input[type="color"],
+#languageSelection select {
+  display: block;
+  margin: 0.5rem auto;
+}
+
+#units label,
+#themeCustomization label,
+#languageSelection label {
+  display: block;
+  margin: 0.5rem auto;
+  font-size: 1.2rem;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  label,
+  input,
+  button,
+  select {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    margin: 20px auto;
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  label,
+  input,
+  button,
+  select {
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  label,
+  input,
+  button,
+  select {
+    font-size: 1.1rem;
+  }
+}
+
+@media (min-width: 1025px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  label,
+  input,
+  button,
+  select {
+    font-size: 1.2rem;
+  }
+}
+#language {
+  display: block;
+  width: auto; /* Adjusts width to fit content */
+  padding: 8px 1px; /* Comfortable padding */
+  font-size: 1rem; /* Readable font size */
+  margin: 1rem auto; /* Centers the button with margin */
+  text-align: center;
+  background-color: #4caf50; /* Fresh green background */
+  color: #ffffff; /* White text for contrast */
+  border: none; /* No border for a modern look */
+  border-radius: 30px; /* More pronounced rounded corners */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Deeper shadow for depth */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: all 0.3s ease-in-out; /* Smooth transitions for all interactions */
+  text-transform: uppercase; /* Uppercase text for a more stylized look */
+  letter-spacing: 1px; /* Spacing between letters for better readability */
+}
+
+#language:hover {
+  background-color: #43a047; /* Slightly darker shade on hover */
+  transform: scale(1.05); /* Grow effect on hover */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Larger shadow on hover */
+}
+
+#language:focus {
+  outline: none; /* Removes the default focus outline */
+  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.5); /* Custom focus style matching button color */
+}
+
+/* Style for the dropdown options */
+#language option {
+  text-align: center;
+  display: block;
+  padding: 10px 25px; /* Consistent padding with the button */
+  background-color: #f9f9f9; /* Light background for options */
+  color: #333; /* Dark text for options for contrast */
+}
+
+/* Clear styles for the dropdown arrow */
+#language::-ms-expand {
+  display: none;
+}
+input[type="date"] {
+  width: 80%; /* Adjusted for a more professional width */
+  padding: 8px 20px; /* Optimized padding for better form factor */
+  margin-bottom: 1rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid #ddd; /* Subtle border for a refined look */
+  border-radius: 8px; /* Less pronounced rounded corners for a professional appearance */
+  background-color: #ffffff; /* Neutral background for a clean, professional look */
+  color: #333; /* Dark text for better readability */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* More subtle shadow for depth */
+  transition: all 0.2s ease-in-out; /* Smoother transition for interactions */
+  cursor: pointer; /* Cursor to indicate clickable */
+}
+
+input[type="date"]:hover {
+  border-color: #bbb; /* Lighter border on hover for subtle interaction */
+  transform: translateY(-2px); /* Subtle lift effect on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slightly larger shadow on hover for emphasis */
+}
+
+input[type="date"]:focus {
+  outline: none; /* Removes the default focus outline */
+  border-color: #4caf50; /* Accent color border for focus indication */
+  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.4); /* Custom focus style with a softer glow */
+}
