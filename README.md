@@ -27,7 +27,7 @@ The Age Calculator Application is a web-based tool that allows users to calculat
 To use the Age Calculator Application, simply open the provided HTML file (`index.html`) in a web browser. The application does not require any additional setup or installation.
 
 
-# Prerequisites
+## Prerequisites
 
 To use the Age Calculator Application, you need the following:
 
@@ -56,7 +56,7 @@ To use the Age Calculator Application, you need the following:
 
 Contributions to the Age Calculator Application are welcome! If you encounter any issues, have suggestions for improvements, or would like to add new features, feel free to submit a pull request on GitHub.
 
-# Feedback and Support
+## Feedback and Support
 
 We value your feedback! If you have any suggestions, feedback, or need assistance, please don't hesitate to reach out to me Ghulam Mustafa at gmimtiaz125@gmail.com. Your input is crucial for us to continually improve and enhance the Age Calculator to better serve your needs.
 
@@ -65,7 +65,7 @@ We value your feedback! If you have any suggestions, feedback, or need assistanc
 
 The Age Calculator Application is licensed under the MIT License, allowing for free use, modification, and distribution of the codebase. See the `LICENSE` file for more details.
 
-# Conclusion
+## Conclusion
 
 The Age Calculator by Ghulam Mustafa goes beyond being just a tool; it's a companion for anyone curious about their age or in need of a quick and reliable way to calculate it. With its user-friendly design, multilingual support, and customization options, it offers a personalized experience for users worldwide. Try it today and experience the convenience and accuracy of the Age Calculator.
 
